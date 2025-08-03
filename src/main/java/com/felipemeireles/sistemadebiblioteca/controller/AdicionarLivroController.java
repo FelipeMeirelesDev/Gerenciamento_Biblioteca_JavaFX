@@ -41,11 +41,11 @@ public class AdicionarLivroController {
             return;
         }
 
-        if (anoTexto.length() > 4) {
+        if (Integer.parseInt(anoTexto) > 2025) {
             Alert alerta = new Alert(Alert.AlertType.WARNING);
             alerta.setTitle("Ano inválido");
             alerta.setHeaderText(null);
-            alerta.setContentText("O ano não pode ter mais que 4 dígitos.");
+            alerta.setContentText("O ano informado não pode ser superior ao ano atual.");
             alerta.showAndWait();
             return;
         }
